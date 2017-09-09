@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+		<link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+		<script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+		<style>
+			input {
+				width: 150px;
+			}
+			
+			textarea{
+				width: 100%;
+				height: 150px;
+			}
+		</style>
+
+		<script>
+			function calc() {
+				var num1 = document.getElementById("num1").value;
+				var num2 = document.getElementById("num2").value;
+				num1 = parseFloat(num1)
+				num2 = parseFloat(num2)
+				var result = num1 + num2;
+				document.getElementById("result").value = result;
+			}
+
+			function print(message) {
+				document.write(message)
+			}
+			print("<br>")
+			print("<br>")
+
+			function huanghe() {
+				var place=document.getElementById("place").value;
+				var companyClass=document.getElementById("companyClass").value;
+				var companyName=document.getElementById("companyName").value;
+				var bossName=document.getElementById("bossName").value;
+				var money=document.getElementById("money").value;
+				var product=document.getElementById("product").value;
+				var size=document.getElementById("size").value;
+				
+				var result = place+"最大的"+companyClass+companyName+"倒闭了,王八蛋老板"+bossName+"吃喝嫖赌，欠下了"+money+"个"+size+"，带着他的小姨子跑了！我们没有办法，拿着"+product+"抵工资！原价都是一百多、两百多、现在全部只卖二十块，统统只要二十块！" +bossName+"王八蛋，你不是人!我们辛辛苦苦给你干了大半年，你不发工资，你还我血汗钱，还我血汗钱!"
+				 
+				document.getElementById("result").value = result;
+			}
+		</script>
+
+		<body>
+			<input type="text" placeholder="地点:" disabled="disabled" /> <input type="text" id="place" />
+			<input type="text" placeholder="公司类型" disabled="disabled" /> <input type="text" id="companyClass">
+			<br />
+			<input type="text" placeholder="公司名称:" disabled="disabled" /> <input type="text" id="companyName" />
+			<input type="text" placeholder="老板姓名:" disabled="disabled" /> <input type="text" id="bossName" />
+			<br />
+			<input type="text" placeholder="money:" disabled="disabled" /> <input type="text" id="money" />
+			<input type="text" placeholder="产品:" disabled="disabled" /> <input type="text" id="product" />
+			<br />
+			<input type="text" placeholder="价格计量单位:" disabled="disabled" /> <input type="text" id="size" />
+			<br />
+			
+			<textarea id="result">浙江最大互联网公司阿里九九倒闭了，王八蛋老板牛风吃喝嫖赌，欠下了一万个亿，带着他的小姨子跑了!我们没有办法，拿着贴膜抵工资!原价都是一百多、两百多、三百多的贴膜，现在全部只卖二十块，统统只要二十块!牛风王八蛋，你不是人!我们辛辛苦苦给你干了大半年，你不发工资，你还我血汗钱，还我血汗钱!</textarea>
+			<br>
+			<input type="button" value="生成" onclick="huanghe()" style="margin: 0px auto;">
+		</body>
+
+</html>

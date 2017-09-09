@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<title></title>
+	</head>
+	
+	<style>
+		/*天猫超市默认字体为12px*/
+		body{
+			font-size: 12px;
+			font-family: arial;
+		}
+		
+		/*灰色*/
+		a{
+			color:#999;
+		}
+		
+		/*首页和购物车的图标的颜色都是红色*/
+		.redColor{
+			color:#C40000 !important
+		}
+		
+		/*
+		 * 背景色是 #f2f2f2
+		 * 上下内边距均为5px
+		 * 下边缘有一个1px的实线边框，颜色是比背景色#f2f2f2略深的#e7e7e7
+		 */
+		nav.top{
+			background-color: #f2f2f2;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			border-bottom:1px solid #E7E7E7 ;
+		}
+		
+		/* 导航栏中 span 和 a 的样式
+		 * 左右外边距为10px
+		 */
+		nav.top span, nav.top a{
+			color: #999;
+			margin: 0px 10px 0px 10px;
+		}
+		
+		/*指针浮动的颜色*/
+		nav.top a:hover{
+ 		    color: #C40000;
+    	    text-decoration: none;
+		}
+		
+	</style>
+	
+	<nav class="top">
+		<a href="#nowhere">
+			<span class="glyphicon glyphicon-home redColor"></span>
+			天猫首页
+		</a>
+		
+		<span>喵，欢迎来天猫</span>
+			<a href="#nowhere">请登录</a>
+			<a href="#nowhere">免费注册</a>
+		
+		<span class="pull-right">
+			<a href="forebought">我的订单</a>
+			<a href="forecart">
+				<span class="glyphicon glyphicon-shopping-cart redColor"></span>
+				购物车<strong>0</strong>件		
+			</a>
+		</span>
+	</nav>
+	
+</html>
