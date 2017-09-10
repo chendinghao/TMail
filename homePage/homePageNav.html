@@ -71,10 +71,42 @@
 				z-index: -1;
 				/*表示在轮播图片的下方*/
 			}
+			img.catear {
+    			position: absolute;
+    			height: 15px;
+    			display: none;
+			}
 		</style>
+		
+		<script>
+			$(function(){
+				/*
+				 * 当鼠标选中的时候，猫耳朵0.5s后出现
+				 */
+				$("div.rightMenu span").mouseenter(function(){
+					var left = $(this).position().left;
+					var top = $(this).position().top;
+					var width = $(this).css("width");
+					var destLeft = parseInt(left)+parseInt(width)/2;
+					$("img#catear").css("left",destLeft);
+					$("img#catear").css("top",top-20);
+					$("img#catear").fadeIn(500);
+				});
+				
+				/*
+				 * 当鼠标离开的时候，猫耳朵隐藏
+				 */
+				$("div.rightMenu span").mouseleave(function(){
+					$("img#catear").hide();
+				});
+			});
+		</script>
 	</head>
 
 	<body>
+		<div style="height:50px"></div>
+		<img class="catear" id="catear" src="http://how2j.cn/tmall/img/site/catear.png" style="left: 260.5px; top: 159.65px; display: none;">
+		<!--猫耳朵的图片-->
 		<div class="categoryWithCarousel">
 			<div class="headbar">
 				<div class="head">
@@ -86,8 +118,9 @@
 					<span><a href="#nowhere"><img src="http://how2j.cn/tmall/img/site/chaoshi.png"></a></span>
 					<span><a href="#nowhere"><img src="http://how2j.cn/tmall/img/site/guoji.png"></a></span>
 					<span><a href="#nowhere">平板电视</a></span>
-					<span><a href="#nowhere">电热水器
-                </a></span>
+					<span><a href="#nowhere">马桶</a></span>
+					<span><a href="#nowhere">沙发</a></span>
+					<span><a href="#nowhere">电热水器</a></span>
 				</div>
 			</div>
 
